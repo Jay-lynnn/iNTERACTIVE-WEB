@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hillary Jesslyn Brilliano - Portfolio</title>
+    <meta name="description" content="Cybersecurity student in Jakarta. CTF writeups, security projects and contact details.">
+    <link rel="stylesheet" href="Style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- if you're reading this: flag{view_source_counts_as_recon} -->
+
+    <header class="nav">
+        <a class="brand" href="#top">Hillary J. B.</a>
+        <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+        <nav id="menu" aria-label="Main">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="top">
+
+        <section class="hero" id="hero">
+            <div>
+                <h1>Hiii, I'm Hillary Jesslyn Brilliano</h1>
+                <p class="lead">I'm a student passionate about cybersecurity and information security. Currently expanding my technical skills through Capture the Flag (CTF) challenges and building my portfolio.</p>
+                <div class="btns">
+                    <a class="btn solid" href="#projects">See my projects</a>
+                    <a class="btn ghost" href="#contact">Get in touch</a>
+                </div>
+            </div>
+
+            <div class="term" id="term">
+                <div class="term-bar">terminal: type a command or tap one below</div>
+                <div class="term-out" id="out" aria-live="polite"></div>
+                <form class="term-in" id="form" autocomplete="off">
+                    <label for="cmd">$</label>
+                    <input id="cmd" type="text" spellcheck="false" autocapitalize="off" aria-label="Terminal command">
+                </form>
+                <div class="quick">
+                    <button type="button" data-run="help">help</button>
+                    <button type="button" data-run="skills">skills</button>
+                    <button type="button" data-run="projects">projects</button>
+                    <button type="button" data-run="contact">contact</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="wrap">
+                <h2>About me</h2>
+                <div class="about-grid">
+                    <div>
+                        <p>I am an undergraduate student focused on computer security, ethical hacking, and problem-solving. I love taking apart systems to understand how they work and learning how to protect them from vulnerabilities.</p>
+                        <p>When I'm not studying or competing in CTFs, I spend time practicing Linux system administration, web application testing, and building web development projects.</p>
+                        <p><a href="resume.pdf" class="link-btn">Download my résumé</a></p>
+
+                        <div class="mini">
+                            <p>Small challenge. Decode this message: <code>pbagnpg zr</code></p>
+                            <div class="mini-row">
+                                <input id="rot" type="text" placeholder="your answer" aria-label="Your decoded answer" autocomplete="off" spellcheck="false">
+                                <span id="rotmsg" aria-live="polite">Hint: it's a Caesar shift of 13.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portrait-box">
+                        <img class="portrait" src="images/anime me.jpeg" alt="Portrait of Hillary Jesslyn Brilliano">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="wrap">
+                <h2>Projects</h2>
+
+                <div class="filters" role="group" aria-label="Filter projects">
+                    <button class="chip" data-f="all" aria-pressed="true">All</button>
+                    <button class="chip" data-f="security" aria-pressed="false">Security</button>
+                    <button class="chip" data-f="python" aria-pressed="false">Python</button>
+                    <button class="chip" data-f="web" aria-pressed="false">Web</button>
+                </div>
+
+                <ul class="projects">
+                    <li class="project" data-cat="security">
+                        <button class="card-toggle" aria-expanded="false">
+                            <span class="year">2026</span>
+                            <span class="title">CTF Writeups & Labs</span>
+                            <ul class="tags"><li>Linux</li><li>Web Security</li><li>CTF</li></ul>
+                            <span class="plus" aria-hidden="true">+</span>
+                        </button>
+                        <div class="card-panel"><div>
+                            <p>A collection of detailed writeups covering Web Exploitation and Reverse Engineering challenges from various online CTF platforms.</p>
+                            <a href="https://github.com/Jay-lynnn" target="_blank" rel="noopener">View on GitHub</a>
+                        </div></div>
+                    </li>
+
+                    <li class="project" data-cat="security python">
+                        <button class="card-toggle" aria-expanded="false">
+                            <span class="year">2025</span>
+                            <span class="title">Network Traffic Analyzer</span>
+                            <ul class="tags"><li>Python</li><li>Networking</li><li>Wireshark</li></ul>
+                            <span class="plus" aria-hidden="true">+</span>
+                        </button>
+                        <div class="card-panel"><div>
+                            <p>A Python script that parses log files and network packet captures to flag suspicious connection attempts and unusual activity.</p>
+                            <a href="https://github.com/Jay-lynnn" target="_blank" rel="noopener">View on GitHub</a>
+                        </div></div>
+                    </li>
+
+                    <li class="project" data-cat="web">
+                        <button class="card-toggle" aria-expanded="false">
+                            <span class="year">2025</span>
+                            <span class="title">Single-Page Portfolio</span>
+                            <ul class="tags"><li>HTML5</li><li>CSS3</li><li>Responsive</li></ul>
+                            <span class="plus" aria-hidden="true">+</span>
+                        </button>
+                        <div class="card-panel"><div>
+                            <p>A responsive, accessible portfolio site built with semantic HTML5 and custom CSS, with a little vanilla JavaScript and no frameworks. You're looking at it.</p>
+                            <a href="https://github.com/Jay-lynnn" target="_blank" rel="noopener">View on GitHub</a>
+                        </div></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="wrap">
+                <h2>Skills & tools</h2>
+                <div class="skills-grid">
+                    <div class="skill-col">
+                        <h3>Technical skills</h3>
+                        <ul>
+                            <li>Python & Bash scripting</li>
+                            <li>Linux / Unix CLI</li>
+                            <li>HTML5 & CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="skill-col">
+                        <h3>Security tools</h3>
+                        <ul>
+                            <li>Wireshark / packet analysis</li>
+                            <li>Nmap / reconnaissance</li>
+                            <li>Burp Suite / web security</li>
+                        </ul>
+                    </div>
+                    <div class="skill-col">
+                        <h3>Core knowledge</h3>
+                        <ul>
+                            <li>Capture the Flag (CTF)</li>
+                            <li>Network security basics</li>
+                            <li>Web application vulnerabilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="wrap contact-wrap">
+                <h2>Let's build something secure together</h2>
+                <p class="contact-intro">Open to internships, CTF teams and study groups. Email is the fastest way to reach me.</p>
+
+                <div class="contact-rows">
+                    <div class="contact-row">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">
+                            <a href="mailto:h.jesslyn31@gmail.com">h.jesslyn31@gmail.com</a>
+                            <button class="copy" type="button" data-copy="h.jesslyn31@gmail.com">Copy</button>
+                        </span>
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value"><a href="https://github.com/Jay-lynnn" target="_blank" rel="noopener">github.com/Jay-lynnn</a></span>
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value"><a href="https://linkedin.com/" target="_blank" rel="noopener">in/hillary-jesslyn</a></span>
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-label">Based in</span>
+                        <span class="contact-value">Jakarta, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hillary Jesslyn Brilliano. Written by hand, no frameworks.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
